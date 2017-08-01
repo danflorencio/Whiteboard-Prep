@@ -28,6 +28,19 @@ window.onload = function() {
     qNo = result.qNo;
   });*/
   qNum = bgPage.getQNo();
+
+  // The rest of the method is for the dumb little terminal
+  $("#screen input").focus();
+
+  $("#screen input").on('keydown', function(event) {
+    console.log("hello daniel");
+    if(event.which === 13) { // Enter key pressed
+      var $this = $(this),
+      val = $this.val();
+      $this.focus().val('');
+    }
+  });
+
 }
 
 window.addEventListener ("load", readfileautomatically, false);
@@ -55,7 +68,7 @@ function readfileautomatically () {
     {
       var txt = client.responseText.split("\n");
       $.get(txt[qNum], function(data) {
-        document.getElementById("questionName").innerHTML = "Today's Question: " + data.name;
+        document.getElementById("questionName").innerHTML = data.name;
         document.getElementById("question").innerHTML = data.description;
         document.getElementById("questionLink").innerHTML = data.url;
         document.getElementById("questionLink").href = data.url;

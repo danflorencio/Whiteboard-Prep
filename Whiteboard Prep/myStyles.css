@@ -1,27 +1,28 @@
 h1 {
   text-align: center;
   color: Lime;
-  font-family:Courier;
+  font-family:Courier new;
 }
 h2 {
   /*white-space: nowrap;*/
-  text-align: center;
+  text-align: left;
   margin-right: 20px;
   color: Lime;
-  font-family:Courier;
+  font-family:Courier new;
 }
 
 p {
   text-align: center;
   color: Green;
   margin: 20px;
+  font-family: Courier new;
 }
 
 a {
   text-align: center;
   color: White;
-  font-family:Courier;
-  font-size: 250%;
+  font-family:Courier new;
+  font-size: 20px;
   text-decoration: none;
 }
 img {
@@ -39,4 +40,81 @@ html {
 body {
   height: auto;
   width: 800px;
+}
+
+/*html, body{
+width:100%;
+font-size:100%/1.25;
+}/*
+
+/*#computer{*/
+/*border-radius*/
+/*-webkit-border-radius:0.5em;
+   -moz-border-radius:0.5em;
+        border-radius:0.5em;
+border:1px solid #C9C993;
+background:#F0EE7D;
+height:99%;
+width:99%;
+margin:0.5% auto;
+}*/
+
+#screen{
+  font-family: "Courier";
+  font-size: 20px;
+  color:Lime;
+  align: left;
+  text-align: left;
+  margin-right: 20px;
+  color: Lime;
+}
+@keyframes 'blink'{
+  0% { background: rgba(88, 191, 29,0.8); }
+  50% { background: rgba(88, 191, 29,0.2); }
+  100% { background: rgba(88, 191, 29,0.81); }
+}
+@-webkit-keyframes 'blink'{
+  0% { background: rgba(88, 191, 29,0.8); }
+  50% { background: rgba(88, 191, 29,0.2); }
+  100% { background: rgba(88, 191, 29,0.81); }
+}
+@-moz-keyframes 'blink'{
+  0% { background: rgba(88, 191, 29,0.8); }
+  50% { background: rgba(88, 191, 29,0.2); }
+  100% { background: rgba(88, 191, 29,0.81); }
+}
+@-o-keyframes 'blink'{
+  0% { background: rgba(88, 191, 29,0.8); }
+  50% { background: rgba(88, 191, 29,0.2); }
+  100% { background: rgba(88, 191, 29,0.81); }
+}
+#screen input {
+  align:left;
+  width: 95%;
+  font-size: 20px;
+  display:inline;
+  background:transparent;
+  border:none;
+  outline:none;
+    font:Courier;
+    color:Lime;
+    text-shadow:inherit;
+  margin:0 0 -0.4em 0;
+    padding:0;
+    line-height:inherit;
+}
+
+#screen input:after{
+  align: left;
+  /*width: 100%;*/
+  font-size: 20px;
+  display:inline-block;
+  text-align: left;
+  margin-right: 20px;
+  color: Lime;
+  font-family:Courier new;
+  -webkit-animation: blink 5.7s infinite; /* Safari 5, Chrome */
+     -moz-animation: blink 5.7s infinite; /* Firefox 5-15 */
+       -o-animation: blink 5.7s infinite; /* Opera 12+ */
+          animation: blink 5.7s infinite; /* Safari 5, Chrome, Firefox 16+*/
 }
