@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Whiteboard Prep</title>
+    <style>
+    <body>
+      <form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">
+
+        <fieldset>
+          <h2>Json File</h2>
+          <input type='file' id='fileinput'>
+          <input type='button' id='btnLoad' value='Load' onclick='loadFile();'>
+        </fieldset>
+      </form>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #status {
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+    </style>
+    <script type="text/javascript" src="popup.js"></script>
+    <link rel="stylesheet" href="myStyles.css">
+  </head>
+  <body bgcolor="Black">
+    <script type="text/javascript" src="jquery.js"></script>
+    <center>
+    <h1 id ="questionName"></h1>
+    <h2 id="question"></h2>
+    <a id ="questionLink"></a>
+    <br/>
+    <br/>
+    <button id="prev" type="button">Previous</button>
+    <button id="next" type="button">Next></button>
+  </body>
+</html>
