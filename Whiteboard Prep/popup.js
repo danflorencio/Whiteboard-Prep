@@ -17,6 +17,23 @@ var p = "";
 
 var bgPage;
 
+var userName = "";
+
+chrome.identity.getProfileUserInfo(function(userInfo) {
+ /* Use userInfo.email, or better (for privacy) userInfo.id
+    They will be empty if user is not signed in in Chrome */
+  console.log(userInfo.email);
+  for (var i = 0; i < userInfo.email.length; i++) {
+    if (userInfo.email[i] != '@') {
+      userName += userInfo.email[i];
+    }
+    else {
+      break;
+    }
+  }
+  console.log(userName);
+});
+
 window.onload = function() {
   // Debug
   console.log("window.onload");
@@ -30,6 +47,8 @@ window.onload = function() {
   qNum = bgPage.getQNo();
 
   // The rest of the method is for the dumb little terminal
+  //document.getElementById('screen').textContent = userName + '$' + '>';
+
   $("#screen input").focus();
 
   $("#screen input").on('keydown', function(event) {
